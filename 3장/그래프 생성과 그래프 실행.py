@@ -17,6 +17,6 @@ print(sess.run([node1, node2]))  # 상수 값이 출력된다.
 # sess.run(node3): 7.0
 node3 = tf.add(node1, node2)
 print("node3:", node3)
-print("sess.run(node3:", sess.run(node3))
+print("sess.run(node3:)", sess.run(node3))
 
 sess.close()
