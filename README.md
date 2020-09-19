@@ -2,4 +2,4 @@
 
 사용언어:```Python```
 
-ENVIRONMENT: ```python=3.6.8, tensorflow=1.13.1```
+환경: ```python=3.6.8, tensorflow=1.13.1```
