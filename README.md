@@ -3,5 +3,3 @@
 Deep learning from scratch self study
 
 사용언어:```Python 3.8```
-
-환경
