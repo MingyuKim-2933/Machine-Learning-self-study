@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pylab as plt
 
+
 def relu(a):
     return np.maximum(0, a)
 

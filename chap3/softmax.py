@@ -14,6 +14,7 @@ import numpy as np
 # sum_y = np.sum(y)
 # print(sum_y)
 
+
 def softmax(a):
     exp_a = np.exp(a)
     sum_exp_a = np.sum(exp_a)
