@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def numerical_gradient(f, x): # 기울기
+def numerical_gradient(f, x):  # 기울기
     h = 1e-4 # 0.0001
     grad = np.zeros_like(x)  # x와 형상이 같은 배열을 생성
 
@@ -17,6 +17,6 @@ def numerical_gradient(f, x): # 기울기
         fxh2 = f(x)
 
         grad[idx] = (fxh1 - fxh2) / (2*h)
-        x[idx] = tmp_val # 값 복원
+        x[idx] = tmp_val  # 값 복원
 
         return grad
