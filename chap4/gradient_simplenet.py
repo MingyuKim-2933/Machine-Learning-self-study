@@ -26,7 +26,7 @@ print(net.W)  # 난수로 구성된 2X3 행렬을 반환
 x = np.array([0.6, 0.9])
 p = net.predict(x)
 print(p)
-print(np.argmax(p))  # 최대값 반환
+print(np.argmax(p))  # 배열의 최대값 반환
 if np.argmax(p) == 0:
     t = np.array([1, 0, 0])
 elif np.argmax(p) == 1:
