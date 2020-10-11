@@ -16,7 +16,7 @@ class simpleNet:
     def loss(self, x, t):  # 손실함수의 값을 구한다.
         z = self.predict(x)
         y = softmax(z)
-        loss = CEE(y,t)
+        loss = CEE(y, t)
 
         return loss
 
