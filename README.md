@@ -4,4 +4,4 @@ Deep learning from scratch self study
 
 사용언어:```Python 3.8```
 
-예제 
+예제 실습 파일 관리
