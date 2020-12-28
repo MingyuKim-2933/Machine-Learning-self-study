@@ -9,4 +9,5 @@
 환경 : python=3.6.8, tensorflow=1.13.1
 
 train loss: 0.0016, train acc. 0.99
+
 var loss: 0.5823, var acc: 0.8766
