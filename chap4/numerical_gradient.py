@@ -1,5 +1,7 @@
 import numpy as np
 
+def function_2(x):
+    return x[0]**2 + x[1]**2
 
 def _numerical_gradient_1d(f, x):
     h = 1e-4  # 0.0001
