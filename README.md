@@ -1,4 +1,4 @@
-# Deep-Learning-Tensorflow-self-study
+# Deep-Learning-Tensorflow1-self-study
 
 사용언어:```Python```
 
