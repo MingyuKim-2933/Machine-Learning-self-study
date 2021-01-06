@@ -39,7 +39,7 @@ def model():
         MaxPooling2D(2,2),
         Flatten(),
         Dropout(0.5),
-        Dense(512, activation='relu', kernel_initializer="he_normal"),  # he_normalization 추가(가중치 초기화 방법)                
+        Dense(512, activation='relu', kernel_initializer="he_normal"),  # he_normalization 추가(가중치 초기화 방법 : Xavier_normalization과 달리 ReLU함수를 사용할 때도 효과적이다.)                
         Dense(2, activation='softmax')
     ])
     
