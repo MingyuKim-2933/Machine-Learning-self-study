@@ -39,7 +39,7 @@ def model():
         MaxPooling2D(2,2),
         Flatten(),
         Dropout(0.5),
-        Dense(512, activation='relu'),                  
+        Dense(512, activation='relu', kernel_initializer="he_normal"),  # he_normalization 추가(가중치 초기화 방법)                
         Dense(2, activation='softmax')
     ])
     
@@ -73,4 +73,4 @@ if __name__ == '__main__':
     model = model()
     model.save("cats-vs-dogs.h5")  # 학습된 파라미터 파일로 저장
     
-# 결과 : val_loss:0.33644, val_acc:0.8637    
+# 결과 : val_loss:0.33644, val_acc:0.8637 -he_normalization 적용 전   
