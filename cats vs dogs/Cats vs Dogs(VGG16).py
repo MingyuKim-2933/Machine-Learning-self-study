@@ -27,26 +27,39 @@ def model():
     train_data = train_dataset.map(preprocess).batch(32)  # batch_size 32로 train_dataset을 전처리한다.
     valid_data = valid_dataset.map(preprocess).batch(32)  # batch_size 32로 valid_dataset을 전처리한다.
     
-    #  VGG16의 구조를 논문을 보고 구현하였다.
+    #  VGG16_BN의 구조를 논문을 보고 구현하였다.
     model = Sequential([
         Conv2D(64, (3,3), activation='relu',input_shape=(224, 224, 3)),
-        Batch 
+        BatchNormalization(),  # BatchNormalization 사용
         Conv2D(64, (3,3), activation='relu'),
-        MaxPooling2D(2,2),
+        BatchNormalization(),
+        MaxPooling2D((2,2), strides=2),  # stride 2로 적용
         Conv2D(128, (3,3), activation='relu'),
+        BatchNormalization(),
         Conv2D(128, (3,3), activation='relu'),
-        MaxPooling2D(2,2),
+        BatchNormalization(),
+        MaxPooling2D((2,2), strides=2),
         Conv2D(256, (3,3), activation='relu'),
+        BatchNormalization(),
         Conv2D(256, (3,3), activation='relu'),
+        BatchNormalization(),
         Conv2D(256, (3,3), activation='relu'),
-        MaxPooling2D(2,2),
+        BatchNormalization(),
+        MaxPooling2D((2,2), strides=2),
         Conv2D(512, (3,3), activation='relu'),
+        BatchNormalization(),
         Conv2D(512, (3,3), activation='relu'),
+        BatchNormalization(),
         Conv2D(512, (3,3), activation='relu'),
-        MaxPooling2D(2,2),
+        BatchNormalization(),
+        MaxPooling2D((2,2), strides=2),
         Conv2D(512, (3,3), activation='relu'),
+        BatchNormalization(),
         Conv2D(512, (3,3), activation='relu'),
+        BatchNormalization(),
         Conv2D(512, (3,3), activation='relu'),
+        BatchNormalization(),
+        MaxPooling2D((2,2), strides=2),
         Flatten(),
         Dense(512, activation='relu'),  
         Dropout(0.5),
