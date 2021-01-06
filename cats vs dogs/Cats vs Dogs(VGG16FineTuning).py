@@ -1,7 +1,5 @@
 import tensorflow_datasets as tfds
 import tensorflow as tf
-import matplotlib.pyplot as plt
-
 
 from tensorflow.keras.layers import Dense, Conv2D, MaxPooling2D, Flatten, Dropout
 from tensorflow.keras.models import Sequential
