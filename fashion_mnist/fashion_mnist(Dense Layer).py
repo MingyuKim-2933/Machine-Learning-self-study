@@ -50,3 +50,5 @@ def model():
 if __name__ == '__main__':
     model = model()
     model.save("fashion-mnist.h5")
+
+# 결과 : val_loss: 0.3305 - val_acc: 0.8863
