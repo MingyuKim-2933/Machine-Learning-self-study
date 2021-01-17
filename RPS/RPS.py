@@ -20,6 +20,7 @@ if gpus:
     # Memory growth must be set before GPUs have been initialized
     print(e)
 
+#데이터셋 다운로드   
 def model():
     url = 'https://storage.googleapis.com/download.tensorflow.org/data/rps.zip'
     urllib.request.urlretrieve(url, 'rps.zip')
@@ -30,6 +31,7 @@ def model():
 
 
     TRAINING_DIR = "tmp/rps/"
+    #image 
     training_datagen = ImageDataGenerator(
         rescale=1. / 255,
         rotation_range=15,
@@ -43,7 +45,7 @@ def model():
     )
  
 
-
+    
     training_generator = training_datagen.flow_from_directory(TRAINING_DIR, 
                                                           batch_size=80,
                                                           target_size=(150, 150),
