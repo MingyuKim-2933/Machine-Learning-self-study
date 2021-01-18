@@ -48,7 +48,7 @@ def build_CNN_classifier(x):
     W_fc2 = tf.Variable(tf.truncated_normal(shape=[384, 2], stddev=5e-2))
     b_fc2 = tf.Variable(tf.constant(0.1, shape=[2]))
     logits = tf.matmul(h_fc1_drop, W_fc2) + b_fc2
-    logits = tf.layers.batch_normalization(logits)
+    logits = tf.layers.batch_normalization(logits)  # Batch normalization
 
     return logits
 
