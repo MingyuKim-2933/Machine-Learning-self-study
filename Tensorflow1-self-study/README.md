@@ -1,4 +1,4 @@
-# Tensorflow1-Self-Study
+# Tensorflow1-self-study
 
 사용언어:```Python```
 

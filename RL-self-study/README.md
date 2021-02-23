@@ -1,4 +1,4 @@
-# Reinforcement-Learning-self-study
+# RL-self-study
 
 모두를 위한 RL 강좌(Sung Kim) self study
 
