@@ -21,6 +21,9 @@ def preprocess(data):
     x = tf.image.resize(x, size=(224, 224))  # load한 모든 이미지를 224x224 사이즈로 변경시킨다.
     return x, y
 
+transfer_model = VGG16(weights='imagenet', include_top=False, input_shape=(224, 224, 3))  # include=top=False : Dense layer는 가져오지 않는다.
+transfer_model.trainable=False  # trainable=False : convolution 층의 가중치를 얼린다. 나의 train data에 맞춰 가중치가 학습되지 않도록 한다.
+
 
 def model():
     train_data = train_dataset.map(preprocess).batch(32)  # batch_size 32로 train_dataset을 전처리한다.
