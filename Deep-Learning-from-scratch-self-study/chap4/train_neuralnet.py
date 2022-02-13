@@ -1,9 +1,12 @@
 import numpy as np
-from dataset.mnist import load_mnist
-from chap4.two_layer_net import TwoLayerNet
+import sys, os
+from two_layer_net import TwoLayerNet
 
-(x_train, t_train), (x_test, t_test) = \
-    load_mnist(normalize=True, one_hot_label=True)
+sys.path.append('../')
+from dataset.mnist import load_mnist
+
+
+(x_train, t_train), (x_test, t_test) = load_mnist(normalize=True, one_hot_label=True)
 
 train_loss_list = []
 train_acc_list = []

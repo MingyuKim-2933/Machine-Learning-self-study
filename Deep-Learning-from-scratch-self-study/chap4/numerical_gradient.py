@@ -1,7 +1,9 @@
 import numpy as np
 
+
 def function_2(x):
     return x[0]**2 + x[1]**2
+
 
 def _numerical_gradient_1d(f, x):
     h = 1e-4  # 0.0001
@@ -9,13 +11,13 @@ def _numerical_gradient_1d(f, x):
 
     for idx in range(x.size):
         tmp_val = x[idx]
-        x[idx] = float(tmp_val) + h
+        x[idx] = tmp_val + h
         fxh1 = f(x)  # f(x+h)
 
         x[idx] = tmp_val - h
         fxh2 = f(x)  # f(x-h)
-        grad[idx] = (fxh1 - fxh2) / (2 * h)
 
+        grad[idx] = (fxh1 - fxh2) / (2 * h)
         x[idx] = tmp_val
 
     return grad
